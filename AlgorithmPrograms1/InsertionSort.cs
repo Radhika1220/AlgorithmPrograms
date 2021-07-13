@@ -23,7 +23,7 @@ namespace AlgorithmPrograms1
         }
         public void PrintArray(int[] arr)
         {
-            Console.WriteLine("The Sorted array is : ");
+            Console.WriteLine("The Sorted array Using Insertion Sort : ");
             int n = arr.Length;
             for (int i = 0; i < n; ++i)
             {

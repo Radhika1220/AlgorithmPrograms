@@ -15,6 +15,7 @@ namespace AlgorithmPrograms1
             Console.WriteLine("1.Permutation Using Recursion");
             Console.WriteLine("3.Binary Search the word from wordlist");
             Console.WriteLine("4.Insertion Sort");
+            Console.WriteLine("5.Bubble Sort");
             Console.WriteLine("Enter the option");
             int num = Convert.ToInt32(Console.ReadLine());
                 switch (num)
@@ -37,6 +38,12 @@ namespace AlgorithmPrograms1
                         insertionSort.Sort(arr);
                         insertionSort.PrintArray(arr);
                         break;
+                    case 5:
+                        int[] arr1 = { 10, 2, 14, 3, 1, 5, 9 };
+                        BubbleSort.BubbleSortInArray(arr1);
+                        BubbleSort.PrintArray(arr1);
+                        break;
+
                     default:
                         Console.WriteLine("Enter the valid option!");
                         break;
