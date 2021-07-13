@@ -14,6 +14,7 @@ namespace AlgorithmPrograms1
             {
             Console.WriteLine("1.Permutation Using Recursion");
             Console.WriteLine("3.Binary Search the word from wordlist");
+            Console.WriteLine("4.Insertion Sort");
             Console.WriteLine("Enter the option");
             int num = Convert.ToInt32(Console.ReadLine());
                 switch (num)
@@ -29,6 +30,12 @@ namespace AlgorithmPrograms1
                         List<string> words = new List<string>(txtpath.Split(" "));
                         words.Sort();
                         BinarySearch.BinarySearchWord(words);
+                        break;
+                    case 4:
+                        InsertionSort insertionSort = new InsertionSort();
+                        int[] arr = { 10, 2, 14, 3, 1, 5, 9 };
+                        insertionSort.Sort(arr);
+                        insertionSort.PrintArray(arr);
                         break;
                     default:
                         Console.WriteLine("Enter the valid option!");
