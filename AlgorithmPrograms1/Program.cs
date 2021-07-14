@@ -45,8 +45,9 @@ namespace AlgorithmPrograms1
                         break;
                     case 4:
                         int[] arr1 = { 10, 2, 14, 3, 1, 5, 9 };
-                        BubbleSort.BubbleSortInArray(arr1);
-                        BubbleSort.PrintArray(arr1);
+                        BubbleSort<int> bubbleSort = new BubbleSort<int>();
+                        bubbleSort.BubbleSortInArray(arr1);
+                        bubbleSort.PrintArray(arr1);
                         break;
                     case 5:
                         int[] arr2 = { 32, 12, 9, 65, 24, 5 };
