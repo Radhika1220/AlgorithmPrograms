@@ -18,6 +18,7 @@ namespace AlgorithmPrograms1
             Console.WriteLine("4.Bubble Sort");
             Console.WriteLine("5.Merge Sort");
             Console.WriteLine("6.Anagram Problem");
+                Console.WriteLine("7.Prime Numbers between the range from 0-1000");
             Console.WriteLine("Enter the option");
             int num = Convert.ToInt32(Console.ReadLine());
                 switch (num)
@@ -52,6 +53,11 @@ namespace AlgorithmPrograms1
                         break;
                     case 6:
                         Anagram.FindAnagram();
+                        break;
+                    case 7:
+                        Console.WriteLine("The prime numbers are : ");
+                        PrimeNumInRange primeNum = new PrimeNumInRange();
+                        primeNum.FindPrime();
                         break;
                     default:
                         Console.WriteLine("Enter the valid option!");
