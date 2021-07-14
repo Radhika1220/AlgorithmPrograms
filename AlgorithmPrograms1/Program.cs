@@ -21,6 +21,7 @@ namespace AlgorithmPrograms1
                 Console.WriteLine("7.Prime Numbers between the range from 0-1000");
                 Console.WriteLine("8.Prime numbers with anagrams and palindrome");
                 Console.WriteLine("9.Think Number using binary search concept");
+                Console.WriteLine("10.Displaying message using regular expression");
             Console.WriteLine("Enter the option");
             int num = Convert.ToInt32(Console.ReadLine());
                 switch (num)
@@ -96,6 +97,10 @@ namespace AlgorithmPrograms1
                     case 9:
                         ThinkNumber.GuessNumber();
                         break;
+                    case 10:
+                        MessageDemoUsingRegex.DisplayMessage();
+                        break;
+
                     default:
                         Console.WriteLine("Enter the valid option!");
                         break;
