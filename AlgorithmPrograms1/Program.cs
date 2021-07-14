@@ -34,7 +34,8 @@ namespace AlgorithmPrograms1
                         string txtpath = File.ReadAllText(@"C:\Users\Radhika\source\repos\AlgorithmPrograms1\ListOfWords.txt");
                         List<string> words = new List<string>(txtpath.Split(" "));
                         words.Sort();
-                        BinarySearch.BinarySearchWord(words);
+                        BinarySearch<string> binarySearch = new BinarySearch<string>();
+                        binarySearch.BinarySearchWord(words);
                         break;
                     case 3:
                         InsertionSort insertionSort = new InsertionSort();
