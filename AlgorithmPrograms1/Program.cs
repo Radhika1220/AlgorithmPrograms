@@ -38,8 +38,10 @@ namespace AlgorithmPrograms1
                         binarySearch.BinarySearchWord(words);
                         break;
                     case 3:
-                        InsertionSort insertionSort = new InsertionSort();
+             
                         int[] arr = { 10, 2, 14, 3, 1, 5, 9 };
+                        InsertionSort<int> insertionSort = new InsertionSort<int>();
+
                         insertionSort.Sort(arr);
                         insertionSort.PrintArray(arr);
                         break;
