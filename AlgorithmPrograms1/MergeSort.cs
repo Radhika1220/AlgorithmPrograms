@@ -4,15 +4,15 @@ using System.Text;
 
 namespace AlgorithmPrograms1
 {
-    class MergeSort
+    class MergeSort<T> where T:IComparable
     {
         //Merge method 
-        public static void Merge(int[] arr, int l, int m, int r)
+        public  void Merge(T[] arr, int l, int m, int r)
         {
             int n1 = m - l + 1;
             int n2 = r - m;
-            int[] left = new int[n1];
-            int[] right = new int[n2];
+            T[] left = new T[n1];
+            T[] right = new T[n2];
             int i, j;
             for (i = 0; i < n1; ++i)
             {
@@ -28,7 +28,7 @@ namespace AlgorithmPrograms1
             int k = l;
             while (i < n1 && j < n2)
             {
-                if (left[i] <= right[j])
+                if (left[i].CompareTo(right[j]) < 0 || left[i].CompareTo(right[j])==0)
                 {
                     arr[k] = left[i];
                     i++;
@@ -54,18 +54,18 @@ namespace AlgorithmPrograms1
             }
         }
         //Sorting method
-     public static void Sort(int[] arr, int l, int r)
+        public  void Sort(T[] arr, int l, int r)
         {
             if (l < r)
             {
 
-                int m = (l + r) / 2;        
+                int m = (l + r) / 2;
                 Sort(arr, l, m);
-                Sort(arr, m + 1, r);  
+                Sort(arr, m + 1, r);
                 Merge(arr, l, m, r);
             }
         }
-     public static void PrintArray(int[] arr)
+        public void PrintArray(T[] arr)
         {
             int n = arr.Length;
             for (int i = 0; i < n; ++i)
@@ -74,4 +74,3 @@ namespace AlgorithmPrograms1
         }
     }
 }
-

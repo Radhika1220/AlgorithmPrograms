@@ -53,8 +53,9 @@ namespace AlgorithmPrograms1
                         break;
                     case 5:
                         int[] arr2 = { 32, 12, 9, 65, 24, 5 };
-                        MergeSort.Sort(arr2, 0, arr2.Length - 1);
-                        MergeSort.PrintArray(arr2);
+                        MergeSort<int> mergeSort = new MergeSort<int>();
+                        mergeSort.Sort(arr2, 0, arr2.Length - 1);
+                        mergeSort.PrintArray(arr2);
                         break;
                     case 6:
                         Anagram.FindAnagram();
