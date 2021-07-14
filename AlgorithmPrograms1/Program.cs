@@ -20,6 +20,7 @@ namespace AlgorithmPrograms1
             Console.WriteLine("6.Anagram Problem");
                 Console.WriteLine("7.Prime Numbers between the range from 0-1000");
                 Console.WriteLine("8.Prime numbers with anagrams and palindrome");
+                Console.WriteLine("9.Think Number using binary search concept");
             Console.WriteLine("Enter the option");
             int num = Convert.ToInt32(Console.ReadLine());
                 switch (num)
@@ -91,6 +92,9 @@ namespace AlgorithmPrograms1
                         {
                             Console.WriteLine("Number is not a palindrome");
                         }
+                        break;
+                    case 9:
+                        ThinkNumber.GuessNumber();
                         break;
                     default:
                         Console.WriteLine("Enter the valid option!");
