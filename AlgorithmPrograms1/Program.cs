@@ -19,6 +19,7 @@ namespace AlgorithmPrograms1
             Console.WriteLine("5.Merge Sort");
             Console.WriteLine("6.Anagram Problem");
                 Console.WriteLine("7.Prime Numbers between the range from 0-1000");
+                Console.WriteLine("8.Prime numbers with anagrams and palindrome");
             Console.WriteLine("Enter the option");
             int num = Convert.ToInt32(Console.ReadLine());
                 switch (num)
@@ -58,6 +59,33 @@ namespace AlgorithmPrograms1
                         Console.WriteLine("The prime numbers are : ");
                         PrimeNumInRange primeNum = new PrimeNumInRange();
                         primeNum.FindPrime();
+                        break;
+                    case 8:
+                        Console.WriteLine("Enter First number:");
+                        int num1 = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("Enter Second Number :");
+                        int num2 = Convert.ToInt32(Console.ReadLine());
+                        int res1 = PrimeNumExtended.FindPrime(num1);
+                        int res2 = PrimeNumExtended.FindPrime(num2);
+                        bool anagramRes = PrimeNumExtended.FindAnagram(Convert.ToString(num1), Convert.ToString(num2));
+                        bool palindormres = PrimeNumExtended.IsPalindrome(num1);
+                        if(anagramRes)
+                        {
+                            Console.WriteLine("both values are anagrams");
+
+                        }
+                        else
+                        {
+                            Console.WriteLine("both the values are not anagrams");
+                        }
+                        if(palindormres)
+                        {
+                            Console.WriteLine("Number is palindrome");
+                        }
+                        else
+                        {
+                            Console.WriteLine("Number is not a palindrome");
+                        }
                         break;
                     default:
                         Console.WriteLine("Enter the valid option!");
